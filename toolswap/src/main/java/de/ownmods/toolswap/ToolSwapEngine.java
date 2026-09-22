@@ -32,7 +32,7 @@ public final class ToolSwapEngine {
     public void register(){
         AttackBlockCallback.EVENT.register((player,level,hand,pos,direction)->{
             if (!(player instanceof ServerPlayer serverPlayer) || hand != InteractionHand.MAIN_HAND
-                    || player.isSpectator() || !level.hasChunkAt(pos) || !serverPlayer.canInteractWithBlock(pos, 0.0)) return InteractionResult.PASS;
+                    || player.isSpectator() || !de.ownmods.settings.server.WorldMutationGuard.allowed(serverPlayer, serverPlayer.level(), pos)) return InteractionResult.PASS;
             var flags = rules(serverPlayer);
             if (flags.flag("enabled") && flags.flag("auto_tool")) autoSelect(serverPlayer, level.getBlockState(pos));
             return InteractionResult.PASS;
