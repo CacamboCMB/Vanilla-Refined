@@ -80,7 +80,6 @@ final class CropReplantEngine {
             if(hand!=InteractionHand.MAIN_HAND)return InteractionResult.PASS;
             if(!(world instanceof ServerLevel level) || !(player instanceof ServerPlayer p) || !allowed(level,p))return InteractionResult.PASS;
             if(!de.ownmods.settings.server.ServerSettings.effective(p, settings).flag("right_click")
-                    || !p.canInteractWithBlock(hit.getBlockPos(), 0.0)
                     || !de.ownmods.settings.server.WorldMutationGuard.allowed(p, level, hit.getBlockPos())
                     || crop(level.getBlockState(hit.getBlockPos()),p)==null)return InteractionResult.PASS;
             // Server game-mode path keeps vanilla loot, durability, permissions and break callbacks.
