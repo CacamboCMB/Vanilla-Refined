@@ -40,7 +40,7 @@ jobs:
           gradle --no-daemon --console=plain -Pminecraft_version="$MC_VERSION" clean build assembleBundle 2>&1 | tee validation/local/gradle.log
       - name: Preserve unapproved candidate JARs
         if: steps.build.outcome == 'success'
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: candidate-mc${{ matrix.minecraft }}
           path: distribution/build/libs/VanillaRefined-*.jar
@@ -56,14 +56,14 @@ jobs:
         shell: bash
         run: python3 tools/release_assets.py --minecraft "$MC_VERSION" --smoke "validation/local/smoke-${MC_VERSION}/smoke-result.json"
       - name: Upload validated draft assets
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: validated-mc${{ matrix.minecraft }}
           path: build/release-assets/*
           if-no-files-found: error
       - name: Preserve diagnostics even after failure
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: diagnostics-mc${{ matrix.minecraft }}
           path: |
