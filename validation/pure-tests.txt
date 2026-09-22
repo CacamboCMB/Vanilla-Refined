@@ -1,0 +1,88 @@
+FOUNDATION RESULT: 2090 assertions passed (includes 2000 randomized policy samples). No Minecraft runtime test.
+PASS 01 recognises a normal tree
+PASS 02 planning does not mutate world
+PASS 03 breaking a higher log finds lower trunk
+PASS 04 rejects ordinary blocks
+PASS 05 rejects foreign or stripped log as trigger
+PASS 06 rejects a single placed log
+PASS 07 rejects a leafless wood column
+PASS 08 rejects crown consisting only of placed leaves
+PASS 09 never selects placed leaves
+PASS 10 rejects unsupported floating trunk
+PASS 11 does not select a different species of leaves
+PASS 12 leaf contact never pulls in second trunk
+PASS 13 shared equidistant leaves are retained
+PASS 14 connected branches of separate rooted trees are rejected
+PASS 15 adjacent two-root trunks are rejected
+PASS 16 recognises a 2x2 trunk
+PASS 17 rejects roots at mixed heights
+PASS 18 rejects duplicate roots
+PASS 19 rejects four roots in a line
+PASS 20 log count limit aborts entire plan
+PASS 21 leaf count limit aborts entire plan
+PASS 22 leaf graph cap is respected
+PASS 23 horizontal bound aborts connected branch
+PASS 24 vertical bound is respected
+PASS 25 hard read budget is respected
+PASS 26 unloaded chunk adjacent to trunk causes refusal
+PASS 27 output is deterministic and immutable
+PASS 28 invalid planner limits rejected
+PASS 29 missing configuration uses documented defaults
+PASS 30 save and reload roundtrip
+PASS 31 snapshots are immutable
+PASS 32 missing config keys retain defaults
+PASS 33 invalid boolean fails closed without overwriting original
+PASS 34 unknown schema version fails closed
+PASS 35 unrecognised file keys survive save
+PASS 36 failed persistence leaves active snapshot untouched
+PASS 37 save refuses missing schema keys
+PASS 38 save refuses extra schema keys
+PASS 39 save refuses null values
+PASS 40 explicit repair clears load warning
+PASS 41 seven vanilla axe types including copper are offered
+PASS 42 disabling all axe types yields empty allowlist
+PASS 43 registry lists explicitly registered own modules
+PASS 44 registry rejects duplicate own-mod ids
+PASS 45 registry list cannot be mutated
+PATCH PASS 01 free replant works without any sapling drops or inventory
+PATCH PASS 02 free replant restores all four positions of a 2x2 tree
+PATCH PASS 03 free replant leaves existing item counts untouched
+PATCH PASS 04 paid replant reports missing items without placing anything
+PATCH PASS 05 paid 2x2 replant needs four items, not one
+PATCH PASS 06 paid single-tree replant consumes exactly one item
+PATCH PASS 07 paid 2x2 replant consumes exactly four items
+PATCH PASS 08 no planting in an unloaded chunk
+PATCH PASS 09 no planting over an occupied root
+PATCH PASS 10 unsuitable soil is reported before any placement
+PATCH PASS 11 all four roots are validated before placing the first
+PATCH PASS 12 an empty root list is rejected
+PATCH PASS 13 two roots are not a supported planting shape
+PATCH PASS 14 duplicate root positions are rejected
+PATCH PASS 15 mixed-height roots are rejected
+PATCH PASS 16 failed single placement consumes no items
+PATCH PASS 17 failed third placement rolls back the earlier 2x2 saplings
+PATCH PASS 18 false placement result after a write also rolls back the failed root
+PATCH PASS 19 failed item commit rolls back all placed saplings
+PATCH PASS 20 placement exceptions roll back without hiding the exception
+PATCH PASS 21 rollback does not overwrite another block placed by a callback
+PATCH PASS 22 no replanting on the higher log position
+PATCH PASS 23 fresh configurations use the approved paid-replant defaults
+PATCH PASS 24 old config preserves enabled replant and disabled axes
+PATCH PASS 25 old disabled replant remains disabled during migration
+PATCH PASS 26 paid replant option persists independently
+PATCH PASS 27 every Timber option has a real-item icon descriptor
+PATCH PASS 28 each axe uses its own corresponding item icon
+PATCH PASS 29 replant uses a sapling and leaves use a leaf-block icon
+PATCH PASS 30 icon map cannot be modified
+PATCH PASS 31 invalid icon IDs are rejected
+PATCH PASS 32 blank section headings are rejected
+PATCH PASS 33 all 12 settings fit one normal 380x240 content layout
+PATCH PASS 34 small layout retains every option across pages without duplicates
+PATCH PASS 35 page index is clamped after resize
+PATCH PASS 36 missing icons cause a clear layout error
+PATCH PASS 37 empty generic icon schema has one empty page
+PATCH PASS 38 layout rows are immutable
+PATCH PASS 39 all icon rows fit above footer at supported GUI dimensions
+PATCH RESULT: 39 passed. In-memory logic/layout tests; NOT an in-game test.
+RESULT: 84 passed, 0 failed. Pure Java tests only; Minecraft integration NOT tested.
+LAYOUT: 51213 GUI-size cases passed (pure geometry; no game test).

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_cropreplant",
+  "version": "${version}",
+  "name": "Vanilla Refined — Farmer",
+  "description": "Automatisches Ernten und Nachpflanzen reifer Pflanzen.",
+  "authors": [
+    "CacamboCMB"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}",
+    "ownmods_settings": ">=0.12.3-alpha.1"
+  },
+  "entrypoints": {
+    "main": [
+      "de.ownmods.cropreplant.CropReplantMod"
+    ]
+  },
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  }
+}

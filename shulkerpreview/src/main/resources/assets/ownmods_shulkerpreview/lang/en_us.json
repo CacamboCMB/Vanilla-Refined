@@ -1,0 +1,13 @@
+{
+  "ownmods.shulkerpreview.title": "Shulker preview",
+  "ownmods.shulkerpreview.description": "Read-only 27-slot preview of all shulker colors in inventory. Does not move items.",
+  "ownmods.shulkerpreview.group": "Features",
+  "ownmods.shulkerpreview.enabled": "Enable",
+  "ownmods.shulkerpreview.enabled.tip": "Preview a shulker box when hovered.",
+  "ownmods.shulkerpreview.shift_only": "Only with Shift",
+  "ownmods.shulkerpreview.shift_only.tip": "Show only while either Shift key is held.",
+  "ownmods.shulkerpreview.counts": "Stack counts",
+  "ownmods.shulkerpreview.counts.tip": "Show item counts.",
+  "ownmods.shulkerpreview.show_empty": "Empty boxes",
+  "ownmods.shulkerpreview.show_empty.tip": "Also show empty shulker boxes."
+}

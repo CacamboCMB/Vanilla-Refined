@@ -1,0 +1,14 @@
+{
+  "ownmods.gravestone.title": "Gravestone",
+  "ownmods.gravestone.description": "Stores death inventory in a paid grave chest.",
+  "ownmods.gravestone.group": "Gravestone",
+  "ownmods.gravestone.enabled": "Enable gravestone",
+  "ownmods.gravestone.enabled.tip": "On death, create a grave chest when the inventory contains enough total chest/wood resources. Resources may be mixed.",
+  "ownmods.gravestone.single": "Single chest fallback",
+  "ownmods.gravestone.single.tip": "If a double chest cannot be paid for, create a single chest from at least 1 chest / 8 planks / 2 logs (mixed resources also count). Overflow stacks drop at the grave.",
+  "ownmods.gravestone.chat": "Death location in chat",
+  "ownmods.gravestone.chat.tip": "Show the dimension plus death and grave chest coordinates in chat.",
+  "ownmods.gravestone.created.double": "Grave created in %s. Death: %s / %s / %s · Double chest: %s / %s / %s",
+  "ownmods.gravestone.created.single": "Grave created in %s. Death: %s / %s / %s · Single chest: %s / %s / %s",
+  "ownmods.gravestone.overflow": "%s item stacks did not fit and were dropped at the grave."
+}

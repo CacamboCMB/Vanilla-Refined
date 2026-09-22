@@ -1,0 +1,14 @@
+{
+  "ownmods.gravestone.title": "Grabstein",
+  "ownmods.gravestone.description": "Sichert Todesinventar in einer selbst bezahlten Grabkiste.",
+  "ownmods.gravestone.group": "Grabstein",
+  "ownmods.gravestone.enabled": "Grabstein aktiv",
+  "ownmods.gravestone.enabled.tip": "Beim Tod eine Grabkiste bauen, wenn insgesamt genug Kisten/Holz für die Kiste vorhanden sind. Ressourcen dürfen gemischt werden.",
+  "ownmods.gravestone.single": "Einzelkiste als Ersatz",
+  "ownmods.gravestone.single.tip": "Reichen die Ressourcen nicht für eine Doppelkiste, ab 1 Kiste / 8 Bretter / 2 Stämmen (auch gemischt) eine Einzelkiste bauen. Überzählige Gegenstandsstapel fallen am Grab auf den Boden.",
+  "ownmods.gravestone.chat": "Todesort im Chat",
+  "ownmods.gravestone.chat.tip": "Dimension sowie Koordinaten des Todes und der Grabkiste im Chat anzeigen.",
+  "ownmods.gravestone.created.double": "Grabstein erstellt in %s. Tod: %s / %s / %s · Doppelkiste: %s / %s / %s",
+  "ownmods.gravestone.created.single": "Grabstein erstellt in %s. Tod: %s / %s / %s · Einzelkiste: %s / %s / %s",
+  "ownmods.gravestone.overflow": "%s Gegenstandsstapel passten nicht in die Einzelkiste und wurden am Grab fallen gelassen."
+}

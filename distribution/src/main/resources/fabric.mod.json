@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "id": "vanilla_refined",
+  "version": "${version}",
+  "name": "Vanilla Refined",
+  "description": "by Cacambo. Personal quality-of-life modules with authoritative server rules.",
+  "authors": [
+    "CacamboCMB"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "contact": {
+    "homepage": "https://github.com/CacamboCMB/Vanilla-Refined",
+    "sources": "https://github.com/CacamboCMB/Vanilla-Refined",
+    "issues": "https://github.com/CacamboCMB/Vanilla-Refined/issues"
+  },
+  "entrypoints": {
+    "main": [
+      "de.ownmods.settings.SettingsMod",
+      "de.ownmods.timber.TimberMod",
+      "de.ownmods.cropreplant.CropReplantMod",
+      "de.ownmods.inventorysort.InventorySortMod",
+      "de.ownmods.gravestone.GravestoneMod",
+      "de.ownmods.toolswap.ToolSwapMod"
+    ],
+    "client": [
+      "de.ownmods.settings.client.SettingsClient",
+      "de.ownmods.shulkerpreview.client.ShulkerPreviewClient",
+      "de.ownmods.inventorysort.client.InventorySortClient",
+      "de.ownmods.mousewheel.client.MouseWheelClient",
+      "de.ownmods.zoom.client.ZoomClient",
+      "de.ownmods.notes.client.NotesClient",
+      "de.ownmods.minimap.client.MinimapClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "ownmods_shulkerpreview.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "ownmods_inventorysort.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "ownmods_mousewheel.mixins.json",
+      "environment": "client"
+    },
+    {
+      "config": "ownmods_zoom.mixins.json",
+      "environment": "client"
+    },
+    "ownmods_gravestone.mixins.json"
+  ],
+  "provides": [
+    "ownmods_settings",
+    "ownmods_timber",
+    "ownmods_cropreplant",
+    "ownmods_shulkerpreview",
+    "ownmods_inventorysort",
+    "ownmods_mousewheel",
+    "ownmods_zoom",
+    "ownmods_notes",
+    "ownmods_gravestone",
+    "ownmods_toolswap",
+    "ownmods_minimap"
+  ],
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}"
+  },
+  "custom": {
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate",
+    "vanilla_refined:protocol": 1
+  }
+}

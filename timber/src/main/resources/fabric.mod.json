@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_timber",
+  "version": "${version}",
+  "name": "Vanilla Refined — Timber",
+  "description": "Fällt erkannte Bäume inklusive zugeordneter Blätter und kann nachpflanzen.",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.ownmods.timber.TimberMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}",
+    "ownmods_settings": ">=0.12.3-alpha.1"
+  },
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  },
+  "authors": [
+    "CacamboCMB"
+  ]
+}

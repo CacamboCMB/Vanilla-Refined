@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "de.ownmods.mousewheel.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": ["ContainerScreenAccess"],
+  "injectors": {"defaultRequire": 1}
+}

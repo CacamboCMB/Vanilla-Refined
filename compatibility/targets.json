@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "currentTarget": "26.3",
+  "modVersion": "0.12.3-alpha.1",
+  "runtime": {
+    "minecraft": ">=26.2",
+    "loader": ">=0.19.5",
+    "fabricApi": ">=0.159.0",
+    "java": ">=25"
+  },
+  "status": "Source candidate; pure tests executed locally. Minecraft compile, production server smoke and multiplayer acceptance pending.",
+  "policy": "Open runtime predicates are not a support claim. Release assets require target-specific build and production server checks. Stable releases additionally require reviewed two-client functional acceptance. Unknown future APIs may require code changes.",
+  "gradleBuild": "9.6.0",
+  "targets": {
+    "26.2": {
+      "loader": "0.19.5",
+      "fabricApi": "0.161.0+26.2",
+      "status": "candidate: full build and runtime validation pending",
+      "supported": false
+    },
+    "26.3": {
+      "loader": "0.19.5",
+      "fabricApi": "0.161.0+26.3",
+      "status": "candidate: full build and runtime validation pending",
+      "supported": false
+    }
+  }
+}

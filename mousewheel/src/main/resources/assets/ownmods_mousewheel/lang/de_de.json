@@ -1,0 +1,9 @@
+{
+  "ownmods.mousewheel.title": "Mausrad",
+  "ownmods.mousewheel.description": "Verschiebt Gegenstände mit dem Mausrad zwischen Inventar und Lager.",
+  "ownmods.mousewheel.group": "Mausrad",
+  "ownmods.mousewheel.enabled": "Mausrad-Verschieben",
+  "ownmods.mousewheel.enabled.tip": "Hoch: immer zur Kiste/Lagerseite. Runter: immer ins Spielerinventar.",
+  "ownmods.mousewheel.invert": "Richtung umkehren",
+  "ownmods.mousewheel.invert.tip": "Vertauscht die Ziele: Hoch ins Inventar, runter zur Kiste/Lagerseite."
+}

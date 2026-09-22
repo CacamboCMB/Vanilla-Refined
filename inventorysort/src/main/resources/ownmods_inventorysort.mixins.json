@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "de.ownmods.inventorysort.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "ContainerScreenAccess"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

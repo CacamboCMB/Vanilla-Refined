@@ -1,0 +1,15 @@
+{
+  "ownmods.zoom.title": "Zoom",
+  "ownmods.zoom.description": "Zoom ohne ein Fernglas zu benutzen.",
+  "ownmods.zoom.group": "Funktionen",
+  "ownmods.zoom.enabled": "Aktivieren",
+  "ownmods.zoom.enabled.tip": "C halten zum Zoomen; unter Steuerung neu belegbar.",
+  "ownmods.zoom.toggle": "Umschaltmodus",
+  "ownmods.zoom.toggle.tip": "C drücken zum Ein-/Ausschalten statt gedrückt halten.",
+  "ownmods.zoom.strong": "Starker Zoom",
+  "ownmods.zoom.strong.tip": "8× statt 4× Vergrößerung.",
+  "ownmods.zoom.smooth": "Weicher Übergang",
+  "ownmods.zoom.smooth.tip": "Weicher Ein- und Auszoom.",
+  "key.category.ownmods_zoom.keys": "Vanilla Refined: Zoom",
+  "key.ownmods_zoom.zoom": "Zoom"
+}

@@ -1,0 +1,25 @@
+// The root build deliberately does NOT apply Loom to this aggregate-only project.
+plugins { id 'java-library' }
+base { archivesName = 'VanillaRefined' }
+java { sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25 }
+tasks.named('jar', Jar) {
+    archiveFileName = "VanillaRefined-${rootProject.mod_version}+mc${rootProject.minecraft_version}.jar"
+    duplicatesStrategy = DuplicatesStrategy.FAIL
+    from(rootProject.file('LICENSE'))
+    from(rootProject.file('NOTICE.md'))
+    rootProject.ext.modProjects.each { p ->
+        dependsOn p.tasks.named('classes'), p.tasks.named('clientClasses')
+        from(p.sourceSets.main.output) { exclude 'fabric.mod.json' }
+        from(p.sourceSets.client.output)
+    }
+}
+tasks.register('allSourcesJar', Jar) {
+    archiveFileName = "VanillaRefined-${rootProject.mod_version}+mc${rootProject.minecraft_version}-sources.jar"
+    duplicatesStrategy = DuplicatesStrategy.FAIL
+    from(rootProject.file('LICENSE'))
+    rootProject.ext.modProjects.each { p ->
+        from(p.sourceSets.main.allJava)
+        from(p.sourceSets.client.allJava)
+    }
+}
+tasks.named('assemble') { dependsOn 'allSourcesJar' }

@@ -1,0 +1,6 @@
+{
+  "ownmods.notes.title": "Notes",
+  "ownmods.notes.description": "Locations, collection lists, goals and personal notes.",
+  "ownmods.notes.enabled": "Enable Notes",
+  "ownmods.notes.enabled.tooltip": "Enable or disable the notebook; saved notes are preserved."
+}

@@ -1,0 +1,1082 @@
+{
+  "schemaVersion": 1,
+  "version": "0.12.3-alpha.1",
+  "repository": "CacamboCMB/Vanilla-Refined",
+  "branch": "feature/server-foundation-0.12.3",
+  "expectedRemoteCommit": "b352f2862946920fce401efc396a8dbb0208f44f",
+  "createdUtc": "2026-09-22T15:52:51.119212+00:00",
+  "purpose": "One-time complete source import. Not a Minecraft mod installer or approved release.",
+  "validation": "compatibility/LOCAL-VALIDATION.json",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "52ed0b9a0d7f0ce9316059127a42248fd0927844a5d1491fcf4ff4d46a111ec0",
+      "size": 143
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "sha256": "5e54c7e473646e7b15345ac8dc7749922495be1cac57135cdf3cde5e4d20911f",
+      "size": 144
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "ed82ba0fcc0911599031ef52d4989a9d9919f19d35d5a94c84c86bd1baa49b50",
+      "size": 266
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "322699500a38f71ca73a7b374388d0fa37c56ef4af091a114f6e951baf1fc15f",
+      "size": 1803
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "4fa4bbcbd659c2e43ad90ae1820e79c8d7970c45c67e744594fb088cc32ca085",
+      "size": 3903
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8d2e748d0e2ac3fd9e2ae260e53fccbc64a18bb63a0cef7623bd91d5497ffc0d",
+      "size": 175
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "7dad4a8db51b55da96bfd0df4dfde932d0cccfbc5dc454c78b83f454dc3e2b09",
+      "size": 702
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "80d8e0c394e8a0ce60c37d84d599fb80fde5fc9779b573bfe2863919273a84c2",
+      "size": 1067
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "043e4fada31d4b7dbe640cd4189d0f071a7743e262472de2ef8a2b53f654118f",
+      "size": 648
+    },
+    {
+      "path": "README.md",
+      "sha256": "bf1665550455b131c2dad2c825782996894e30b68a1aa8f77b9d11de716d0592",
+      "size": 4203
+    },
+    {
+      "path": "build.gradle",
+      "sha256": "61aa4d7cdaf211677dbff77f4e42891110325fd1d8a9c260206a2bc5e45b8ddd",
+      "size": 9900
+    },
+    {
+      "path": "compatibility/LOCAL-VALIDATION.json",
+      "sha256": "b57c866c7765455d600477e34b57456dbaebf8cb6c749519af0ee67d66bd65da",
+      "size": 781
+    },
+    {
+      "path": "compatibility/README-DE.md",
+      "sha256": "ff36220971ddd6ffc6cfed814b6d8a2d079a9cdee9ae3bd99d4b1cfabf0089b8",
+      "size": 812
+    },
+    {
+      "path": "compatibility/targets.json",
+      "sha256": "2e7bf1a425e183dc5037a0169e6196d45e0d8bb394fd7a620889164e2caf6671",
+      "size": 1017
+    },
+    {
+      "path": "cropreplant/src/main/java/de/ownmods/cropreplant/CropReplantEngine.java",
+      "sha256": "6ef5a503f1c2e79b6335fd648781a95a73d8d7bb4942e7b1d4b8aafaf96b8a4e",
+      "size": 8580
+    },
+    {
+      "path": "cropreplant/src/main/java/de/ownmods/cropreplant/CropReplantMod.java",
+      "sha256": "bd0979334ef838a8e8d95ef15a304c307aead794e48896732667b9cb8510fd6c",
+      "size": 633
+    },
+    {
+      "path": "cropreplant/src/main/java/de/ownmods/cropreplant/CropReplantSettings.java",
+      "sha256": "ef5b850dd7c37ad7f7b97ea2fd8a32179543afdbd6a23262c9321667ae095867",
+      "size": 2125
+    },
+    {
+      "path": "cropreplant/src/main/java/de/ownmods/cropreplant/core/ReplantTransaction.java",
+      "sha256": "93e6778c7ad0a0547478286267dc7a1b7f526eeec13ae1b0399430a47439d4a1",
+      "size": 1278
+    },
+    {
+      "path": "cropreplant/src/main/resources/assets/ownmods_cropreplant/lang/de_de.json",
+      "sha256": "37d00c33338c5af6405c828617d5d8e607d4c4e12e510f0500451d3aa03200b4",
+      "size": 1468
+    },
+    {
+      "path": "cropreplant/src/main/resources/assets/ownmods_cropreplant/lang/en_us.json",
+      "sha256": "2d0d3a5dd5a007984d2b36f9290eae1fb50258d74d83c9c04fabc15bd2b7aa4c",
+      "size": 1438
+    },
+    {
+      "path": "cropreplant/src/main/resources/fabric.mod.json",
+      "sha256": "b2c5843489b23658da7501fa0f25cb0765ed45eb61f6c5facd56eed18389f9c4",
+      "size": 790
+    },
+    {
+      "path": "distribution/build.gradle",
+      "sha256": "37e97ff02e0c222479bfd0f7c8ce803a846f1850a020fd319a43b6fc56222601",
+      "size": 1176
+    },
+    {
+      "path": "distribution/src/main/resources/fabric.mod.json",
+      "sha256": "2b06b06e33cfa531a25deed6c3690e3a933643db119d75e78dfb1027f093710f",
+      "size": 2260
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "sha256": "982a7602986ad711dd66f33f5a690b7b5f2217fe3afb5444eefa2a34eaf3da89",
+      "size": 3009
+    },
+    {
+      "path": "docs/GITHUB_IMPORT_DE.md",
+      "sha256": "3bfc9c26028a7580f1d7c06a6e836a17b0c37439116ca904c6226381e0e8f2e3",
+      "size": 3126
+    },
+    {
+      "path": "docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "6755f28153f21db455589ae878b022a5b33b40f39699958869421cde60095d56",
+      "size": 2586
+    },
+    {
+      "path": "docs/README.en.md",
+      "sha256": "a940e3b397ce44d382877b835699c1d02a7f622fba90d0713be6220ef13e1a33",
+      "size": 1783
+    },
+    {
+      "path": "docs/RELEASE_NOTES.md",
+      "sha256": "0128aca1304790740f89d0fec6ad9bca560e142faa8eab893e6fc4be15b1c233",
+      "size": 1038
+    },
+    {
+      "path": "docs/SERVER.md",
+      "sha256": "f597a10405799a3eee3f0f2089f612b0b43507a908c5b44c141185f721164395",
+      "size": 5272
+    },
+    {
+      "path": "docs/server-policy.example.properties",
+      "sha256": "9a74615991a86626d2f77708ad58af4a2ab8490097a8b178a89abd51aaf1db48",
+      "size": 3240
+    },
+    {
+      "path": "gradle.properties",
+      "sha256": "05a6b94b32c8897709e455bd65cf510cfecafe76d34bdcd643ce35f728824324",
+      "size": 162
+    },
+    {
+      "path": "gravestone/src/main/java/de/ownmods/gravestone/GraveEngine.java",
+      "sha256": "b777b2ff4e2fa4fa2ecabdab16232c2a8e9bf0af2bb8682e0c6a9dfebff38316",
+      "size": 11649
+    },
+    {
+      "path": "gravestone/src/main/java/de/ownmods/gravestone/GravestoneMod.java",
+      "sha256": "e2d6f75e41248456615b19b910a327955750fdbecf5dc763acbf2f09556edb5c",
+      "size": 702
+    },
+    {
+      "path": "gravestone/src/main/java/de/ownmods/gravestone/GravestoneSettings.java",
+      "sha256": "6b9c2d12726cee41271e5410eee7095d611c651e324451dcc9ea9199d01ec347",
+      "size": 1016
+    },
+    {
+      "path": "gravestone/src/main/java/de/ownmods/gravestone/compat/PlayerDropCompat.java",
+      "sha256": "e24edab9b3e52c8db261f96034c1ab02d1134a7388d0eb5d8e6288f11c3ae056",
+      "size": 3136
+    },
+    {
+      "path": "gravestone/src/main/java/de/ownmods/gravestone/core/GraveResourcePlanner.java",
+      "sha256": "66355801852607fb1e95ec3d44a4f247a329ee2a6b15640df69de41c1abcc7c9",
+      "size": 3034
+    },
+    {
+      "path": "gravestone/src/main/java/de/ownmods/gravestone/mixin/PlayerDropEquipmentMixin.java",
+      "sha256": "0987bcf5019e256d2996f497445b36c2868458959673e5bf7f8d026d0f0610e4",
+      "size": 770
+    },
+    {
+      "path": "gravestone/src/main/resources/assets/ownmods_gravestone/lang/de_de.json",
+      "sha256": "d4b492be760a9983471c4ef165ddd3665acd68a6b2cb7d59937a8af74ee08c50",
+      "size": 1208
+    },
+    {
+      "path": "gravestone/src/main/resources/assets/ownmods_gravestone/lang/en_us.json",
+      "sha256": "13c0b887549aa6c9ff8689b85b2aa4c04b76239a576efb7a8803009463a42cde",
+      "size": 1125
+    },
+    {
+      "path": "gravestone/src/main/resources/fabric.mod.json",
+      "sha256": "a9336efae8d762fe964ae3685c1d4ae2f32d7cff1991bdbadcd02d6107c911fa",
+      "size": 874
+    },
+    {
+      "path": "gravestone/src/main/resources/ownmods_gravestone.mixins.json",
+      "sha256": "a9297512bc46f51396e20e4be6bd6eb9a999036b857230755a05d1e48b0c53e8",
+      "size": 160
+    },
+    {
+      "path": "inventorysort/src/client/java/de/ownmods/inventorysort/client/InventorySortClient.java",
+      "sha256": "c148dc2f5c85a6c45bde594d87fdc91b24dce1fcac496c5a2f52fcef05ac03ad",
+      "size": 5481
+    },
+    {
+      "path": "inventorysort/src/client/java/de/ownmods/inventorysort/client/mixin/ContainerScreenAccess.java",
+      "sha256": "bf25281c699d88a32233ff8704621fe6013364aad31fcc93be472e6e3a28319c",
+      "size": 443
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/InventorySortMod.java",
+      "sha256": "6c1c39c5bdc06bdcbf2e0813db51cfac8c6aa7a0ba45e3ab68393212a912b0b3",
+      "size": 1386
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/InventorySortSettings.java",
+      "sha256": "90bc876331bd9bfd44a9e67a71b7c394ba0c4a413cbc63e3e13e56182ff7d71d",
+      "size": 2434
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/InventorySorter.java",
+      "sha256": "d383a9f53fc83a7031a334110f4de64bd637d888541501338020001cbd7b42b4",
+      "size": 4810
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/ItemSortKeys.java",
+      "sha256": "8cfd7425952c0272d3301241fb8c57d1297450cf9ceec0fdc6aebafdede005b8",
+      "size": 1702
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/SortRequestPayload.java",
+      "sha256": "ae4b8519b88d9ca5abeed14f95d2907fcc41e2bc0f5c08e3d7509e26136e4441",
+      "size": 1218
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/core/InventorySections.java",
+      "sha256": "fe73fd2ba65412fc1358c7ab479758d98274b57c267e4ed5f004352c13ab9b3a",
+      "size": 650
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/core/SlotTransaction.java",
+      "sha256": "4ac3fb2b0aa33abf770f637020f10d4b7af405f0d45992a54f999c33a67dfc6c",
+      "size": 1753
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/core/SortButtonLayout.java",
+      "sha256": "4675483308ed1d7901caee7973b00733bd52870d67496c63786c19952581034b",
+      "size": 568
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/core/SortCatalog.java",
+      "sha256": "279e0329aedeee0b864ba76582f45417dcd728888197a88c74e6b64a6cb317b9",
+      "size": 23973
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/core/SortMode.java",
+      "sha256": "5fad6f16e916123ad49d02addb25971e92fd5ff6691fb79f88c39d38f6827487",
+      "size": 563
+    },
+    {
+      "path": "inventorysort/src/main/java/de/ownmods/inventorysort/core/StackSorter.java",
+      "sha256": "3c7b10eab7caa3c4f1aadcf4531ba1613eef8f03ea898320027ebd1406e87488",
+      "size": 2432
+    },
+    {
+      "path": "inventorysort/src/main/resources/assets/ownmods_inventorysort/lang/de_de.json",
+      "sha256": "fa49b873c0eb4145c2e2f131182f7c6357a0fa30d40e008b28aa5c4f05b3cb32",
+      "size": 2596
+    },
+    {
+      "path": "inventorysort/src/main/resources/assets/ownmods_inventorysort/lang/en_us.json",
+      "sha256": "dcb8fade033d721ad9ab55350c8f1124a43aa04b9c98c4f6f7638010c8812b51",
+      "size": 2419
+    },
+    {
+      "path": "inventorysort/src/main/resources/fabric.mod.json",
+      "sha256": "e48ee7b22de3a7ea794f35c9db42994a74089a50db2ed5526bec5edf7a64bcc4",
+      "size": 1032
+    },
+    {
+      "path": "inventorysort/src/main/resources/ownmods_inventorysort.mixins.json",
+      "sha256": "adc0bd6e485c9c5f2940544bbe9e8f039aa7e78d61cbbac880242be5ea75c8e4",
+      "size": 205
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/HudMapTexture.java",
+      "sha256": "b80c148fc1a69a04e56e73f78a34fe8a9b6f6cdea3ab8fec572601be8ab2e7d6",
+      "size": 4293
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/LoadedTerrainReveal.java",
+      "sha256": "07fe4aaffc84b8032e47b3a0cecbb1a2b55df508d9ddd4c8e68e6d1d30dbff38",
+      "size": 4045
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MapFilterScreen.java",
+      "sha256": "52d65290d3d8d08765417fd11cd211f9c833717e657d93b9aaeca202f3489a78",
+      "size": 1873
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MapRasterTexture.java",
+      "sha256": "cb3556c38af7c4d4b4fd05a0420cfe554fbe2c1b2e85b8adaa162118ba39a442",
+      "size": 5225
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MapUi.java",
+      "sha256": "1f92fa0c0bb75fd79245f550df42a147e6eaacb9a0467861ee9325f2b5a50262",
+      "size": 28990
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MarkerInfoScreen.java",
+      "sha256": "ed8516b1575a8c54fe221550d7056523a722af8592f10fff5c0ec7e3bf375b67",
+      "size": 3322
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MinimapClient.java",
+      "sha256": "cdf9404d8d7ca025339f19a39f364eac59661fb029dded99dfd2f999635483c0",
+      "size": 16732
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MinimapSession.java",
+      "sha256": "cb1cc4da40507c06a09bef98fd8042738e13cd8301cbe4f690833ad3dd869532",
+      "size": 4031
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/MinimapSettingsScreen.java",
+      "sha256": "d549d14c1b24ce6843300626e07ff2cd3bf31a449c8d4d5c8a31a451b6945aeb",
+      "size": 14037
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/SimpleMessageScreen.java",
+      "sha256": "a8c711ee5be3a6db2c61bb9b246b874a9b684280bc36b8a1db4c4600c8d072aa",
+      "size": 907
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/TerrainPalette.java",
+      "sha256": "42a98349450b694a575b6fdf4fbd5bc3cd0250e880d764a6e044f89c398dad94",
+      "size": 1580
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/VanillaLiveMapUpdater.java",
+      "sha256": "d31f47737cb3221fa4885cee52c3f1c453fd47a3826063c1011779fe8c65149e",
+      "size": 6593
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/VanillaMapImporter.java",
+      "sha256": "470bdadc6385f36572e0fa8b5d87a3150a06dcca787c209f9cfe29846ccda0a7",
+      "size": 4801
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/WaypointEditScreen.java",
+      "sha256": "8cf724ddf548c09aa5d64483851202d7a00820c0d08bf1b4cd6ec3b6ad4cb98e",
+      "size": 3371
+    },
+    {
+      "path": "minimap/src/client/java/de/ownmods/minimap/client/WorldMapScreen.java",
+      "sha256": "c6512d12b3537adb310fa3ecefc1511d5bd9deaa956e802a9a9289a343ae444f",
+      "size": 37350
+    },
+    {
+      "path": "minimap/src/main/java/de/ownmods/minimap/MinimapSettings.java",
+      "sha256": "68245c332cda0d5f3fe9cb31c2ef261ca1974027f1921e11f575f78ea95b8019",
+      "size": 5779
+    },
+    {
+      "path": "minimap/src/main/java/de/ownmods/minimap/core/ExplorationStore.java",
+      "sha256": "aa1832651ee6b9a4c6086e1326569d92257beabead3a74225b5d4cfd51c59344",
+      "size": 5198
+    },
+    {
+      "path": "minimap/src/main/java/de/ownmods/minimap/core/ExploredMap.java",
+      "sha256": "1cae8a66bba22eb61d45cbccb1ba489331e1395ca99cd51ee5ce6e26a3dee8fb",
+      "size": 6230
+    },
+    {
+      "path": "minimap/src/main/java/de/ownmods/minimap/core/MarkerMath.java",
+      "sha256": "a20d26190522bb5c1e0e2b478adc6052556139fc766a83b0cd929b9638b0df29",
+      "size": 685
+    },
+    {
+      "path": "minimap/src/main/resources/assets/ownmods_minimap/lang/de_de.json",
+      "sha256": "cd2d20cb566c3668655cc39286953982387fd004c99d08109b127e08ae883c6d",
+      "size": 1698
+    },
+    {
+      "path": "minimap/src/main/resources/assets/ownmods_minimap/lang/en_us.json",
+      "sha256": "545a0723926c4d2676462edbb65f2d71a7ba633662903e587e8573e586df6fc1",
+      "size": 1619
+    },
+    {
+      "path": "minimap/src/main/resources/fabric.mod.json",
+      "sha256": "aafc09d5bbc7afc45b3f8e762cc5079af20fcc75be095cf1369952737a2bf77c",
+      "size": 921
+    },
+    {
+      "path": "mousewheel/src/client/java/de/ownmods/mousewheel/client/MouseWheelClient.java",
+      "sha256": "1561bc109557ba3914a6707e7bb4c3a9dcaeb81901f2250a81f7c63cfec6c364",
+      "size": 7055
+    },
+    {
+      "path": "mousewheel/src/client/java/de/ownmods/mousewheel/client/mixin/ContainerScreenAccess.java",
+      "sha256": "0b53a3e20bb058a65c171aeb5363176fc6be56c5970a625447d66d0f313283e9",
+      "size": 398
+    },
+    {
+      "path": "mousewheel/src/main/java/de/ownmods/mousewheel/MouseWheelSettings.java",
+      "sha256": "3f92acf0f7243aa5e56d3af0975073b0f48edc38ab5fcc6e4d3d4f337f800d65",
+      "size": 1008
+    },
+    {
+      "path": "mousewheel/src/main/java/de/ownmods/mousewheel/core/WheelDirection.java",
+      "sha256": "7ed6476929e67502dffe0cf5204e10c7f0a0bdf4e055d2e241dd0440a45e58ac",
+      "size": 966
+    },
+    {
+      "path": "mousewheel/src/main/resources/assets/ownmods_mousewheel/lang/de_de.json",
+      "sha256": "04dbec3af3046697083b337103a11ba9b1ddaa213be837ca85eb48caa6dfc45d",
+      "size": 516
+    },
+    {
+      "path": "mousewheel/src/main/resources/assets/ownmods_mousewheel/lang/en_us.json",
+      "sha256": "21196a146a9a14756dde75b02299c0481408746ca7c978eaaa43ef7adc24d3ca",
+      "size": 515
+    },
+    {
+      "path": "mousewheel/src/main/resources/fabric.mod.json",
+      "sha256": "9d31072362b545a426da5530d596799a4661d5ca189c062155ffde9c02f179a7",
+      "size": 927
+    },
+    {
+      "path": "mousewheel/src/main/resources/ownmods_mousewheel.mixins.json",
+      "sha256": "1462528eab86ac18081c81793fb066820cf0bb5c1c04839da1c38425e128d90f",
+      "size": 186
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/BiomePickerScreen.java",
+      "sha256": "85d3d5ac250411c6dbc3575a8679726bbe298569931f35259075cf3aac848b20",
+      "size": 2731
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/ConfirmScreen.java",
+      "sha256": "02c11d60fb692d9c62e7f0b667242b576e214a6be49fae3e22f6215dea10f120",
+      "size": 918
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/ItemAmountScreen.java",
+      "sha256": "d8f01b048885e47e6b43f96367dac094a59bcbc6a624bffceeb4c24ecce70de8",
+      "size": 3048
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/ItemPickerScreen.java",
+      "sha256": "6dbdf51c95e7cb31b3f0fc66b72d08e02fc6da27be8b87fb9ac72c8116f2c6a1",
+      "size": 3012
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NewNoteScreen.java",
+      "sha256": "ae514172681ee34e8a5329cf909206f53e56798245619f42cb18465a4e583898",
+      "size": 1831
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NoteEditorScreen.java",
+      "sha256": "cbabcd8ae24a9232b4e035bb922f421dd19b99b50e89b70d15600a7634f806d5",
+      "size": 23755
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NoteTemplateScreen.java",
+      "sha256": "3833705abd60930fa636971ebd9ce07e57ee67ff6ed0937a780c91ccab10ef4c",
+      "size": 4322
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotebookBase.java",
+      "sha256": "a523a2aaf8884e7a217dd7ea5aeb8a421a4fe33fcabe30a07ceaed81a60a2326",
+      "size": 11269
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotebookScreen.java",
+      "sha256": "4030bd2e4eacf4f7d0e6e46be354647351e472394c041dfe9e1222a56a6927c6",
+      "size": 23972
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotebookSettingsScreen.java",
+      "sha256": "f45a1b8fdd336f1395ad66e6c9614aa1f97306b889671e356274d82e7b654e9d",
+      "size": 1214
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotesBridge.java",
+      "sha256": "bfdfa1352e1a93b10958fd5be37e7d421fcc2bb1d8eeb32a51f549a211ffa6b3",
+      "size": 3721
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotesClient.java",
+      "sha256": "d34e7de4b9d923757695363c09e05f5711eb99dd904172507144a6f9e87a3c52",
+      "size": 5540
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotesLabels.java",
+      "sha256": "822fabfd230131897e9da6282c18432018c84cebf72fd41a72ba537ae9447c8b",
+      "size": 1874
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/NotesUi.java",
+      "sha256": "7e1725f20abe10c2dbb79a83c6512a0e8c71370e408fd327a73750748c476e46",
+      "size": 28738
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/PortalAssistantScreen.java",
+      "sha256": "9180eeec6d440053775a322f43f30c265bf6cd70e71e3f271dc6a741d78273b4",
+      "size": 3243
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/PositionScreen.java",
+      "sha256": "dbac55e74bf974e9c7be42e83337da91e34f45093d57fe9f78bdf92c991512a0",
+      "size": 1940
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/TargetScreen.java",
+      "sha256": "6a31591fac61953d298ad0834cd137da8f468f0c7ff189215495b42dd6312f4a",
+      "size": 1379
+    },
+    {
+      "path": "notes/src/client/java/de/ownmods/notes/client/TextInputScreen.java",
+      "sha256": "2bfe834c1f89447312b8f858f4ee38d7e6baea0dd2a2848dd99190d550c07208",
+      "size": 863
+    },
+    {
+      "path": "notes/src/main/java/de/ownmods/notes/NotesSettings.java",
+      "sha256": "e22b49ccf0f05a7f5331d7b4088671c8f3861890b1e5ed3facdac2430f9859b2",
+      "size": 642
+    },
+    {
+      "path": "notes/src/main/java/de/ownmods/notes/core/BiomeVisuals.java",
+      "sha256": "39f48048fdb0436b20be9ba5bff4e07caf571767109c7d8bb245b923a7be82e9",
+      "size": 3390
+    },
+    {
+      "path": "notes/src/main/java/de/ownmods/notes/core/Note.java",
+      "sha256": "2c6289ce1730ceb1092c64fc9ea09eeb75340473664c1aca3150a80e0e2ad548",
+      "size": 5773
+    },
+    {
+      "path": "notes/src/main/java/de/ownmods/notes/core/NotesCatalog.java",
+      "sha256": "2c74adbbe971e5716ac914f581c93212d8cd4c595b28ce65aaa40048bf082b4d",
+      "size": 12918
+    },
+    {
+      "path": "notes/src/main/java/de/ownmods/notes/core/NotesStore.java",
+      "sha256": "617f1bddcc1386811c08b68be4ffa41fab999526ef47fbc91024369af79d283a",
+      "size": 8356
+    },
+    {
+      "path": "notes/src/main/resources/assets/ownmods_notes/lang/de_de.json",
+      "sha256": "a5e028a6be5914f13d6e9bd905d7c1c8ce563e5fab13b984cfaa6ecd44bfed7e",
+      "size": 280
+    },
+    {
+      "path": "notes/src/main/resources/assets/ownmods_notes/lang/en_us.json",
+      "sha256": "89626f135bc23238b2b1c647e9e2e7943c9db3ff05b5ef1f04edbc3281855bfb",
+      "size": 266
+    },
+    {
+      "path": "notes/src/main/resources/assets/ownmods_notes/textures/gui/home-reference.png",
+      "sha256": "bde44b1b198cc9ca1b34438745b4253440fb906157f876aacfda426910f3a39e",
+      "size": 40652
+    },
+    {
+      "path": "notes/src/main/resources/assets/ownmods_notes/textures/gui/home.png",
+      "sha256": "7e86a9eb52b6b7057cabd120ba300663cdcbe977f3001343b977ab76364890e5",
+      "size": 1689
+    },
+    {
+      "path": "notes/src/main/resources/fabric.mod.json",
+      "sha256": "8696a0dd7c9cbf9a0bc0a20aaddaf21e45cf9c971d8490cdcc767651426de824",
+      "size": 829
+    },
+    {
+      "path": "settings.gradle",
+      "sha256": "78db8586d72ddae59d898b091af9efa4e1026186208f890ae66846f0bbaf0a66",
+      "size": 376
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/CycleRowButton.java",
+      "sha256": "50ee9c25df9bfa9c96109c8da664a6ae76d23740a870ffcea7797a48735d123d",
+      "size": 3319
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/IconSettingsScreen.java",
+      "sha256": "6490c49611bd859610cb60273d43bad4dae42ea3aa727a23d9c207e2fb81ab30",
+      "size": 11026
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/ItemActionButton.java",
+      "sha256": "70392bed9a38408adabe5c78570ca638d08e999a817a03ed6b29756caadf030e",
+      "size": 2359
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/ItemToggleButton.java",
+      "sha256": "1d73da4cd2439545cfe49ebf0efcef89ca29f0b25f041a4c52bf8ba4088bb920",
+      "size": 4235
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/ModSettingsScreen.java",
+      "sha256": "b0e480ef285b2b2b6b258d14a4f4f09e9fbaff7626d0ae6a312b851940d6928a",
+      "size": 612
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/ModTileButton.java",
+      "sha256": "7369e98fd347bd4cb866babd202c04d58a5db40c7b023b351d2139f7629da4ad",
+      "size": 2908
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/ModsScreen.java",
+      "sha256": "b8cf4cea12ec919f8c58d7de1fa17bed463bcde8bc6834eb83e4f08a4252cf39",
+      "size": 5929
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/OptionRowButton.java",
+      "sha256": "324d0a086fa40652a41c620560303ed4b14e88d06576dcf76d9dd4c5095a5bd9",
+      "size": 4356
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/OwnModsUi.java",
+      "sha256": "7fd3d513333b69b50e9267fdadf8b44a417df35d6d9f30b1d845b257c8018a92",
+      "size": 20254
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/PagedScreen.java",
+      "sha256": "e3397adb03588d8330a61dd91bae7e8a7bcdc2270ce519b7ef32734b30e6f400",
+      "size": 2873
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/PanelWidget.java",
+      "sha256": "720dfc107fc12ef2958c63ee0896832317eb3e58f498c5ee8215f048a23cb52d",
+      "size": 861
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/ServerSettingsClient.java",
+      "sha256": "e86175a467cd60877382242a4df2206884ab731d4d3d15b21ae7933dade3356a",
+      "size": 5757
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/SettingsClient.java",
+      "sha256": "73b0d6a9c86cdf06c219120cd4568819bd6f712a0031139866292475e8cf44b4",
+      "size": 4015
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/UiText.java",
+      "sha256": "a0a42f754bb4c69344b501e04318f4b04148312f523e618a6ccb658438f844b3",
+      "size": 27301
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/compat/ContainerContentsCompat.java",
+      "sha256": "edd32a97505ecf149a3e847ee1b12d9f7aa292f298236c9638869ac236417b66",
+      "size": 9636
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/compat/GuiTextureCompat.java",
+      "sha256": "953299036018767004ce91cff26243d1fd6c05ce48b6d94fe83e7b2c9f52d39a",
+      "size": 3839
+    },
+    {
+      "path": "settings/src/client/java/de/ownmods/settings/client/compat/InputCompat.java",
+      "sha256": "f34f8f576bf9d03a280a04a26765caa487465c07fb85ee89516c0f497b7444da",
+      "size": 4084
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/SettingsMod.java",
+      "sha256": "4a6bb4fb501083af1e150c256c53b56bcb009f90affc07d61bdf9638caa13694",
+      "size": 1064
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/api/ChoiceOption.java",
+      "sha256": "0c1be3fdeb853ca2efd095c150868fa7b7be78bca0ec78c0a452f1946ef018ab",
+      "size": 1773
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/api/ManagedMod.java",
+      "sha256": "0f3d6fd979fd648978f682d5063e3335891bcda0e47998ddf86c2f0e42268b78",
+      "size": 1776
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/api/ManagedMods.java",
+      "sha256": "2118e5f8a7ed16bd1283090bf90f6df281dbf9b5ece9f98a5c574d4e41210a51",
+      "size": 1883
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/api/OptionIcon.java",
+      "sha256": "0e5e3630e7bacba8fc378730fba0ab59bf2edc6376961a5ce0a1a091aa0e3c06",
+      "size": 554
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/api/ToggleOption.java",
+      "sha256": "c98a2149b5c9cf19519d0e85b7ad17ca34497f31f0b4050885f2d42d9df07748",
+      "size": 504
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/config/BooleanSettingsFile.java",
+      "sha256": "71a107cc7e71eaa316962d817b222c74b9994d8b8f9af635709fceb5bb625feb",
+      "size": 6502
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/config/SimpleManagedMod.java",
+      "sha256": "7e9ca3548a72a1f434be28ab531036d5c9a831dab190bb65e2b0b13ccc38e7b8",
+      "size": 2759
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/layout/IconGridLayout.java",
+      "sha256": "59a526382421559bd62afb6096ba8663a6972323dbde5e56c2f681058c01d52e",
+      "size": 2230
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/layout/ModGridLayout.java",
+      "sha256": "08be90c39d29d4f0bb0b46a2595823a6539c73632055c80a75fbce6729ad2c29",
+      "size": 688
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/layout/OptionsFooterLayout.java",
+      "sha256": "89df1e0fbf4b8daa8bbbe949e4d28b5981fc98a9dfbd982da7a871174c47db64",
+      "size": 1515
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/layout/RefinedLayout.java",
+      "sha256": "2f225b284a57b29cafd9da4ff41abcaaa5fae1c59e37176003394f49d8e9458c",
+      "size": 2015
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/layout/SettingsRows.java",
+      "sha256": "1f8dfea98a4275bbb2346dce53efbda1a07b59a64c23a3711a069254fffc99c8",
+      "size": 1307
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/network/PreferencesPayload.java",
+      "sha256": "f76ec6813eadb77817357fc457c6278e1175295202dba396595db6b5a2934a8e",
+      "size": 1219
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/network/ServerStatePayload.java",
+      "sha256": "79ff0bafae69ca313450a8dba43b9db007a46a1f87bc1db3fdaa6ab5fee89490",
+      "size": 1642
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/ModulePolicy.java",
+      "sha256": "ea14fd444e4e67f46fba54e7957deb7a3739f57697a7d88f1b62f2735fec54f2",
+      "size": 3524
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/ModuleSchema.java",
+      "sha256": "02f3ed2ae2474b11a9db9a36d5cf212961897ad915e11cb80faee108b4a83127",
+      "size": 2674
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/PolicyCodec.java",
+      "sha256": "211d1805e766456c7345b080c7b05f55eb65a61556682e81359d99a058b41786",
+      "size": 5585
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/PreferenceSnapshot.java",
+      "sha256": "ec61b6d0f2eacdb5bdb42579da62740b17b2c2f0d4ca3e9119943323d965298a",
+      "size": 776
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/RequestGate.java",
+      "sha256": "48f7dce24b0e32fe28324a933ff12b00d526a097f58f945004354c73fd8920c1",
+      "size": 647
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/ServerModules.java",
+      "sha256": "8767377166b013e3da8d26a60c988f8fb3c3cea675361c66d21a3d11074ed3fc",
+      "size": 1010
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/policy/SettingsWire.java",
+      "sha256": "356749411f51ad20590792517e00ba0c06565751a8abdcb3fcdcd680c5b2d731",
+      "size": 2919
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/server/ServerSettings.java",
+      "sha256": "0d7208be3d2884ae77422380dce568b1a5a86a510ea3a770ef24822f05a50f28",
+      "size": 9670
+    },
+    {
+      "path": "settings/src/main/java/de/ownmods/settings/server/WorldMutationGuard.java",
+      "sha256": "ead2981d059c4666e5280a46cf297182f85e4f526b235be844d1bcc56df800f5",
+      "size": 1179
+    },
+    {
+      "path": "settings/src/main/resources/assets/ownmods_settings/lang/de_de.json",
+      "sha256": "a39f796de8a7799d7752b13e4ad2d0294d431ed5b8740f6a19b0c1e7e850a5cb",
+      "size": 22960
+    },
+    {
+      "path": "settings/src/main/resources/assets/ownmods_settings/lang/en_us.json",
+      "sha256": "ac53b93d5cd7e202b870f9e1aa1c0b0c30101c5752fcb3e9c59492e02c91a4d8",
+      "size": 21746
+    },
+    {
+      "path": "settings/src/main/resources/fabric.mod.json",
+      "sha256": "f2e251368a8fa9ac39bf5231a2d020d9553e3acf3f5aa9ef771b4e67970273b1",
+      "size": 802
+    },
+    {
+      "path": "shulkerpreview/src/client/java/de/ownmods/shulkerpreview/client/ShulkerPreviewClient.java",
+      "sha256": "6b1f593693e85abc8788b513520d2cec4a95c8eb4f510f503d8309869fb84931",
+      "size": 3147
+    },
+    {
+      "path": "shulkerpreview/src/client/java/de/ownmods/shulkerpreview/client/mixin/ContainerTooltipMixin.java",
+      "sha256": "51f2916632f073eed0b6d7b336a70b10b06c8d70f4914a9a46e8c3949495d309",
+      "size": 1076
+    },
+    {
+      "path": "shulkerpreview/src/main/java/de/ownmods/shulkerpreview/ShulkerPreviewSettings.java",
+      "sha256": "2998d1f4b956b0097f0a3345408e4dc5324480c76b044e23bb277d5d808d884a",
+      "size": 1319
+    },
+    {
+      "path": "shulkerpreview/src/main/java/de/ownmods/shulkerpreview/core/PreviewLayout.java",
+      "sha256": "5e3c42c6e8c1d00870f19b2e51f2c09c1dd4299ce2775089a2f8e47ed3ee4dc1",
+      "size": 628
+    },
+    {
+      "path": "shulkerpreview/src/main/resources/assets/ownmods_shulkerpreview/lang/de_de.json",
+      "sha256": "72854b88d10b1241f2ca07ff7a10200b59617cd3e78069b31919ec548f4c5a14",
+      "size": 724
+    },
+    {
+      "path": "shulkerpreview/src/main/resources/assets/ownmods_shulkerpreview/lang/en_us.json",
+      "sha256": "6808e96409bf2ce58503a9b84c511898dc0da57062de2f3fb8a2b24361cb69ae",
+      "size": 741
+    },
+    {
+      "path": "shulkerpreview/src/main/resources/fabric.mod.json",
+      "sha256": "63abd5e02bb3d45c03d65b1631f9d9e30aadd346bdd88eeca2b5cc0bc1a3174d",
+      "size": 933
+    },
+    {
+      "path": "shulkerpreview/src/main/resources/ownmods_shulkerpreview.mixins.json",
+      "sha256": "f358d03847468d07052f90c87803158d68af36ec0a4f01dd55fa580513fb8b30",
+      "size": 206
+    },
+    {
+      "path": "tests/java/de/ownmods/tests/FoundationTests.java",
+      "sha256": "bc796ff5eb524a27d58a816632905614d6e92387620353de6f2e15c6e222c2bc",
+      "size": 13759
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/TimberEngine.java",
+      "sha256": "c2d7ea7e99b093de9adc820840ed7135e13b04c01b2fe15af40602b0ad4a3bd0",
+      "size": 15656
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/TimberMod.java",
+      "sha256": "18aa333f90aa71edfe0d5c252c98c5c849fd0ee503c4d745cc99073816557920",
+      "size": 719
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/TimberSettings.java",
+      "sha256": "9919638ce53a1dd87906fa413263a380c11f2105ad41d1e8841a30e4f8eaad5c",
+      "size": 4078
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/TreeSpecies.java",
+      "sha256": "ee1b6ddaa93a74e4624b86543ca6cd7d7e722d62d8f916ea82d3c70cf2101062",
+      "size": 1608
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/core/GridPos.java",
+      "sha256": "994244191b0dd1fe1b029d2cde7dc949d809de287bc93316a1e7b40b4e08296a",
+      "size": 528
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/core/Replanting.java",
+      "sha256": "9ab9e2d41150a822a708a26658c7cf401710a7102d2bd757177c732365e9d802",
+      "size": 4130
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/core/TreePlan.java",
+      "sha256": "107d7d8da13dbac03c1321cf10fbf949fd65fb939a23df95a586fdfea2ced110",
+      "size": 314
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/core/TreePlanner.java",
+      "sha256": "75309b95a2d73a76157f098af3474e3439708209b9cbc5c83722969fe2e00169",
+      "size": 8021
+    },
+    {
+      "path": "timber/src/main/java/de/ownmods/timber/core/Voxel.java",
+      "sha256": "948eb390bc9da24a83fbb65c2b6792bf82dc3a20fda8fe455071101b0c1bfae5",
+      "size": 866
+    },
+    {
+      "path": "timber/src/main/resources/assets/ownmods_timber/lang/de_de.json",
+      "sha256": "dc28b210dbd7584f14e50e2cc05f89e2e668eaf15b30dd92a9ffa79f6c40a2df",
+      "size": 2168
+    },
+    {
+      "path": "timber/src/main/resources/assets/ownmods_timber/lang/en_us.json",
+      "sha256": "e9eef30dc0850e64b81d696a3d61e328d83b15874a2fe5473a6c7ca5c5df9329",
+      "size": 1945
+    },
+    {
+      "path": "timber/src/main/resources/fabric.mod.json",
+      "sha256": "3ced998fc864167ffa7f42876a740c003737f758eb5a98e0995c90746a22f1e6",
+      "size": 798
+    },
+    {
+      "path": "timber/src/test/java/de/ownmods/timber/core/CoreTests.java",
+      "sha256": "efdcba171939ba0a7bda5bb0f0f61f4b9181192811df02d8ecf508a314c2bc55",
+      "size": 15708
+    },
+    {
+      "path": "timber/src/test/java/de/ownmods/timber/core/PatchTests.java",
+      "sha256": "728e86193f920e9c5fccb27ec0dec039c34ecefb2c77d764ba75a33304a78c83",
+      "size": 15913
+    },
+    {
+      "path": "tools/Build-Candidate.ps1",
+      "sha256": "15fc0d727e1181ec7edf7168471508c9638a366312e04d91a4b20607d3d7b2cd",
+      "size": 1946
+    },
+    {
+      "path": "tools/Publish-Sources.ps1",
+      "sha256": "b4f7049263484981a08b755cc75565cbba1380efa6ba21e662688e91b39aac29",
+      "size": 5555
+    },
+    {
+      "path": "tools/compat-check/src/de/ownmods/compatcheck/CompatibilityApiCheck.java",
+      "sha256": "50cd0f995e866728aa608e87e1b4d41341c1bced24370b2eae9568bb3034285c",
+      "size": 12780
+    },
+    {
+      "path": "tools/compatibility/test_adapters.py",
+      "sha256": "42dcdfd43e72b0da59a4476d4ae22f6afbb9e2979f0e62316d7e6123a7157bbf",
+      "size": 11188
+    },
+    {
+      "path": "tools/release_assets.py",
+      "sha256": "918071cd6fb38edd6d39a131a1ed73401d1e19134fe1ff467185e65855689f83",
+      "size": 2480
+    },
+    {
+      "path": "tools/server_smoke.py",
+      "sha256": "b0455e05633972fe8d04db52607838927a3b450b1f3e91e7a213da813b5d4177",
+      "size": 6597
+    },
+    {
+      "path": "tools/syntax-check/SyntaxCheck.java",
+      "sha256": "fcaf9c690822851af83c8bae76b4c76566ff8eef25d064aab8d53e555634dc88",
+      "size": 1447
+    },
+    {
+      "path": "tools/test_pure.py",
+      "sha256": "d3e0441a98d593b8e3ba1b841cac0f94e35b1f1e5e0b50c723b2342fa0022cc5",
+      "size": 1764
+    },
+    {
+      "path": "tools/ui-check/de/ownmods/uicheck/LayoutChecks.java",
+      "sha256": "784c1193cab6b89fdeda98374b507cbb1a4988cff5b597df8b84ba2493d80b37",
+      "size": 2581
+    },
+    {
+      "path": "tools/verify_distribution.py",
+      "sha256": "d2458bc2c999faaba708f067f6e1680305538b4a98c08b11e8baf370910bab64",
+      "size": 3004
+    },
+    {
+      "path": "tools/verify_foundation.py",
+      "sha256": "8a9c86ed90f31e566fe8f67826e350f5bc1389d96c2dc57e71e313c2b7812fe8",
+      "size": 5109
+    },
+    {
+      "path": "toolswap/src/main/java/de/ownmods/toolswap/ToolSwapEngine.java",
+      "sha256": "84150539ba92843535123400e029792cefeb513aa4e1071a8e889bd4a39be519",
+      "size": 8439
+    },
+    {
+      "path": "toolswap/src/main/java/de/ownmods/toolswap/ToolSwapMod.java",
+      "sha256": "c80598ed5319e1088a128e929bebef6cbd4ed50ba31dde083ae70e49aa13b46e",
+      "size": 481
+    },
+    {
+      "path": "toolswap/src/main/java/de/ownmods/toolswap/ToolSwapSettings.java",
+      "sha256": "d011cb557b4c3dd777c23e59d822a40f4a892044ce6fb62425b7f448e1d8070e",
+      "size": 1661
+    },
+    {
+      "path": "toolswap/src/main/java/de/ownmods/toolswap/core/ToolPolicy.java",
+      "sha256": "31f42dfc1f57f2126fb1c58b6cf84312d2aea9b4265dedfb2f21971401eb4b33",
+      "size": 844
+    },
+    {
+      "path": "toolswap/src/main/resources/assets/ownmods_toolswap/lang/de_de.json",
+      "sha256": "de1e76a33b749a88c55e9691ff2d6e6c73d3ccf7804a928365850ddbeabc2105",
+      "size": 1685
+    },
+    {
+      "path": "toolswap/src/main/resources/assets/ownmods_toolswap/lang/en_us.json",
+      "sha256": "18bb3724077edc2ea4588e062df4272303f90083f4bfbd5a4ce9fbc1426c7e90",
+      "size": 1462
+    },
+    {
+      "path": "toolswap/src/main/resources/fabric.mod.json",
+      "sha256": "ed36d907f74bcb7b315aa5a8d39617f5a45894723bc96ac17dfb85ceb58d94df",
+      "size": 815
+    },
+    {
+      "path": "validation/acceptance-template.json",
+      "sha256": "33613dafc3b7d886af4b7d558c99b609b31a628597faf367a1de2f969010012f",
+      "size": 338
+    },
+    {
+      "path": "validation/java-syntax.txt",
+      "sha256": "d9372aea15a14e02858fadc465e88b9d15c75e978c3ae006b77b64ebf6cbf0e3",
+      "size": 76
+    },
+    {
+      "path": "validation/pure-tests.txt",
+      "sha256": "e838b551e92f62a761b0c612a02381f23f898e2de86673594828e2402ab7adef",
+      "size": 4732
+    },
+    {
+      "path": "validation/structure-check.txt",
+      "sha256": "93db11a19cd1720e33caf6e5f32dd08de186d7d3e89c6b815976cb14d27e1fce",
+      "size": 105
+    },
+    {
+      "path": "zoom/src/client/java/de/ownmods/zoom/client/ZoomClient.java",
+      "sha256": "0e0e805651fcc0e67770990af04b3f772ef9d6f8f501dd5d68a76b95aadce873",
+      "size": 2405
+    },
+    {
+      "path": "zoom/src/client/java/de/ownmods/zoom/client/mixin/CameraZoomMixin.java",
+      "sha256": "430555fc4c81c6664b74a6441fd959ebd201ea6af462cfa373230ca3ec8b992f",
+      "size": 639
+    },
+    {
+      "path": "zoom/src/main/java/de/ownmods/zoom/ZoomSettings.java",
+      "sha256": "8bd73de04e1151470110454e26b12d99dd635017c3f47318d7ce74916b0bb137",
+      "size": 1108
+    },
+    {
+      "path": "zoom/src/main/java/de/ownmods/zoom/core/ZoomState.java",
+      "sha256": "7710099dc447925ed3bcd8f73b8e1fe62a474ecbdb9f2b16c20dec6ad652f213",
+      "size": 1525
+    },
+    {
+      "path": "zoom/src/main/resources/assets/ownmods_zoom/lang/de_de.json",
+      "sha256": "7a3ebfef322377de5b519392fc5bb900e59d581fe9d4b4c38943de1ba17184c9",
+      "size": 699
+    },
+    {
+      "path": "zoom/src/main/resources/assets/ownmods_zoom/lang/en_us.json",
+      "sha256": "f5444747671417596b03c30c7f9bba1edc5c07eb9710582c97a2ef40fa135f4a",
+      "size": 723
+    },
+    {
+      "path": "zoom/src/main/resources/fabric.mod.json",
+      "sha256": "5ef64531ce64b84442c47df6ae3d931a1910faf3961f2647360d6135bcbb9945",
+      "size": 874
+    },
+    {
+      "path": "zoom/src/main/resources/ownmods_zoom.mixins.json",
+      "sha256": "2fe224ff9dba08d83dc57207e4c8bddb94df1b67585c72c198113b7cce749e44",
+      "size": 190
+    }
+  ]
+}

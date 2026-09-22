@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "version": "0.12.3-alpha.1",
+  "sourceCommit": null,
+  "testedJarSha256": null,
+  "reviewer": null,
+  "twoClientGameplayPassed": false,
+  "clientUiDeEnFallbackPassed": false,
+  "unmoddedClientJoinPassed": false,
+  "inventoryConservationInGamePassed": false,
+  "claimIntegrationPassed": false,
+  "evidence": []
+}

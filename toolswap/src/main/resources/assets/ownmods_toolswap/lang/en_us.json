@@ -1,0 +1,19 @@
+{
+  "ownmods.toolswap.title": "Tool swap",
+  "ownmods.toolswap.description": "Replaces broken tools and can auto-select the recommended mining tool.",
+  "ownmods.toolswap.group": "Tool swap",
+  "ownmods.toolswap.enabled": "Enable Tool Swap",
+  "ownmods.toolswap.enabled.tip": "When a mining tool breaks while breaking a block, insert an eligible replacement from inventory.",
+  "ownmods.toolswap.auto": "Auto-select recommended tool",
+  "ownmods.toolswap.auto.tip": "Automatically select pickaxe, axe, shovel or hoe according to vanilla mining tags.",
+  "ownmods.toolswap.enchanted": "Allow enchanted tools",
+  "ownmods.toolswap.enchanted.tip": "When disabled, enchanted tools are never selected automatically from inventory.",
+  "ownmods.toolswap.policy": "Tool quality",
+  "ownmods.toolswap.policy.tip": "Controls quality tiers eligible for replacement and auto selection.",
+  "ownmods.toolswap.policy.same": "Same quality",
+  "ownmods.toolswap.policy.same.tip": "Iron only replaces iron, diamond only diamond, etc. If the held item has no known tier, the best matching tool is used.",
+  "ownmods.toolswap.policy.worse": "Same or worse",
+  "ownmods.toolswap.policy.worse.tip": "Prefer the same tier, otherwise the highest lower tier. Wood < Gold < Stone < Copper < Iron < Diamond < Netherite.",
+  "ownmods.toolswap.policy.best": "Best available",
+  "ownmods.toolswap.policy.best.tip": "Use the highest matching tier, then the tool with the most durability."
+}

@@ -1,0 +1,24 @@
+{
+  "version": "0.12.3-alpha.1",
+  "dateUtc": "2026-09-22T15:45:31.974306+00:00",
+  "executed": {
+    "foundationAssertions": 2090,
+    "randomizedPolicySamplesIncludedInAssertions": 2000,
+    "timberAndPatchTestsTotal": 84,
+    "layoutGeometryCases": 51213,
+    "translationKeysPerLanguage": 655,
+    "javaSyntaxFiles": 137,
+    "workflowYamlAndBashParsing": true,
+    "purePolicyExampleRoundtrip": true
+  },
+  "environment": "OpenJDK 21 / Python; pure production-code tests and static parsing only",
+  "notExecuted": [
+    "Full Java 25 Minecraft/Fabric compilation",
+    "Production server startup",
+    "Multiplayer gameplay",
+    "Windows PowerShell 5.1 parsing",
+    "Actual aggregate JAR verification"
+  ],
+  "multiplayerApproved": false,
+  "stableReleaseApproved": false
+}

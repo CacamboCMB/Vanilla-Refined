@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "de.ownmods.shulkerpreview.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "ContainerTooltipMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

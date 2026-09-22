@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_toolswap",
+  "version": "${version}",
+  "name": "Vanilla Refined — Tool Swap",
+  "description": "Ersetzt gebrochene Werkzeuge und kann automatisch das passende Abbauwerkzeug wählen.",
+  "authors": [
+    "CacamboCMB"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}",
+    "ownmods_settings": ">=0.12.3-alpha.1"
+  },
+  "entrypoints": {
+    "main": [
+      "de.ownmods.toolswap.ToolSwapMod"
+    ]
+  },
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  }
+}

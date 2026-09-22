@@ -1,0 +1,13 @@
+{
+  "ownmods.shulkerpreview.title": "Shulker-Vorschau",
+  "ownmods.shulkerpreview.description": "Zeigt den Inhalt von Shulkerboxen an.",
+  "ownmods.shulkerpreview.group": "Funktionen",
+  "ownmods.shulkerpreview.enabled": "Aktivieren",
+  "ownmods.shulkerpreview.enabled.tip": "Shulker-Inhalt beim Darüberfahren anzeigen.",
+  "ownmods.shulkerpreview.shift_only": "Nur mit Umschalt",
+  "ownmods.shulkerpreview.shift_only.tip": "Vorschau nur mit gedrückter Umschalt-Taste.",
+  "ownmods.shulkerpreview.counts": "Anzahlen",
+  "ownmods.shulkerpreview.counts.tip": "Stapelgrößen einblenden.",
+  "ownmods.shulkerpreview.show_empty": "Leere Boxen",
+  "ownmods.shulkerpreview.show_empty.tip": "Auch leere Shulkerboxen anzeigen."
+}

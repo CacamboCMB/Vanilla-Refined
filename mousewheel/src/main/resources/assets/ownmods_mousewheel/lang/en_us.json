@@ -1,0 +1,9 @@
+{
+  "ownmods.mousewheel.title": "Mouse wheel",
+  "ownmods.mousewheel.description": "Moves items between inventory and storage with the mouse wheel.",
+  "ownmods.mousewheel.group": "Mouse wheel",
+  "ownmods.mousewheel.enabled": "Wheel transfer",
+  "ownmods.mousewheel.enabled.tip": "Scroll up: always toward storage. Scroll down: always toward the player inventory.",
+  "ownmods.mousewheel.invert": "Invert direction",
+  "ownmods.mousewheel.invert.tip": "Swaps the destinations: up to inventory, down to storage."
+}

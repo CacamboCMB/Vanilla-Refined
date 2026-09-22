@@ -1,0 +1,19 @@
+{
+  "ownmods.toolswap.title": "Werkzeugwechsel",
+  "ownmods.toolswap.description": "Werkzeugwechsel bei Bruch und optional automatisch nach Blockart.",
+  "ownmods.toolswap.group": "Werkzeugwechsel",
+  "ownmods.toolswap.enabled": "Werkzeugwechsel aktiv",
+  "ownmods.toolswap.enabled.tip": "Wenn ein Abbauwerkzeug beim Blockabbau bricht, ein passendes Ersatzwerkzeug aus dem Inventar einsetzen.",
+  "ownmods.toolswap.auto": "Empfohlenes Werkzeug automatisch",
+  "ownmods.toolswap.auto.tip": "Beim Blockabbau automatisch Spitzhacke, Axt, Schaufel oder Hacke passend zur Werkzeugzuordnung des Blocks wählen.",
+  "ownmods.toolswap.enchanted": "Verzauberte Werkzeuge erlauben",
+  "ownmods.toolswap.enchanted.tip": "Wenn aus, werden verzauberte Werkzeuge nie automatisch aus dem Inventar ausgewählt.",
+  "ownmods.toolswap.policy": "Werkzeugqualität",
+  "ownmods.toolswap.policy.tip": "Legt fest, welche Qualitätsstufen beim automatischen Ersatz oder Werkzeugwechsel gewählt werden dürfen.",
+  "ownmods.toolswap.policy.same": "Gleiche Qualität",
+  "ownmods.toolswap.policy.same.tip": "Eisen ersetzt nur Eisen, Diamant nur Diamant usw. Ist der aktuell gehaltene Gegenstand kein bekanntes Werkzeug, wird das beste passende Werkzeug gewählt.",
+  "ownmods.toolswap.policy.worse": "Gleich oder schlechter",
+  "ownmods.toolswap.policy.worse.tip": "Bevorzugt dieselbe Stufe, sonst die beste niedrigere Stufe. Reihenfolge: Holz < Gold < Stein < Kupfer < Eisen < Diamant < Netherit.",
+  "ownmods.toolswap.policy.best": "Beste verfügbare",
+  "ownmods.toolswap.policy.best.tip": "Nimmt die höchste verfügbare passende Stufe; bei gleicher Stufe das Werkzeug mit der meisten Resthaltbarkeit."
+}

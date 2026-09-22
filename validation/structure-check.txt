@@ -1,0 +1,1 @@
+FOUNDATION STRUCTURE PASS: 11 modules; 655 DE/EN keys; aggregate entrypoints and physical sides checked.

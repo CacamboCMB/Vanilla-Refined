@@ -1,0 +1,15 @@
+{
+  "ownmods.zoom.title": "Zoom",
+  "ownmods.zoom.description": "Spyglass-style zoom without requiring an item; does not persistently change your field of view.",
+  "ownmods.zoom.group": "Features",
+  "ownmods.zoom.enabled": "Enable",
+  "ownmods.zoom.enabled.tip": "Hold C to zoom; rebind in Controls.",
+  "ownmods.zoom.toggle": "Toggle mode",
+  "ownmods.zoom.toggle.tip": "Press C to toggle instead of holding.",
+  "ownmods.zoom.strong": "Strong zoom",
+  "ownmods.zoom.strong.tip": "8x instead of 4x magnification.",
+  "ownmods.zoom.smooth": "Smooth transition",
+  "ownmods.zoom.smooth.tip": "Smooth transition in and out.",
+  "key.category.ownmods_zoom.keys": "Vanilla Refined: Zoom",
+  "key.ownmods_zoom.zoom": "Zoom"
+}

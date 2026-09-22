@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_settings",
+  "version": "${version}",
+  "name": "Vanilla Refined — Manager",
+  "description": "Zentrales Einstellungsmenü für eigene Mods.",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.ownmods.settings.SettingsMod"
+    ],
+    "client": [
+      "de.ownmods.settings.client.SettingsClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}"
+  },
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  },
+  "authors": [
+    "CacamboCMB"
+  ]
+}

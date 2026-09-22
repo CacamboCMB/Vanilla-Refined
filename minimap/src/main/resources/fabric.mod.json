@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_minimap",
+  "version": "${version}",
+  "name": "Vanilla Refined — Minimap",
+  "description": "Minimap und Weltatlas mit Notizen-Wegpunkten; Vanilla-Kartendaten mit begrenztem Minecraft-MapColor-Fallback aus bereits geladenen Chunks.",
+  "authors": [
+    "CacamboCMB"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}",
+    "ownmods_settings": ">=0.12.3-alpha.1",
+    "ownmods_notes": ">=0.12.3-alpha.1"
+  },
+  "entrypoints": {
+    "client": [
+      "de.ownmods.minimap.client.MinimapClient"
+    ]
+  },
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  }
+}

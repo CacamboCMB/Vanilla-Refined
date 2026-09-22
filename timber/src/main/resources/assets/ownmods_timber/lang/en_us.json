@@ -1,0 +1,22 @@
+{
+  "ownmods.timber.title": "Timber",
+  "ownmods.timber.description": "Break one log to fell a recognised tree and its assigned leaves. Alpha: test on a world copy first.",
+  "ownmods.timber.enabled": "Enable Timber",
+  "ownmods.timber.enabled.tip": "Turns the entire Timber feature on or off after saving.",
+  "ownmods.timber.leaves": "Remove leaves instantly",
+  "ownmods.timber.leaves.tip": "Removes assigned natural leaves. Natural drops without axe wear; no Fortune/Silk Touch bonus for leaves.",
+  "ownmods.timber.replant": "Replant automatically",
+  "ownmods.timber.replant.tip": "Plants matching saplings at the trunk base after a complete felling. A 2×2 base receives four saplings. The Consume saplings option controls the cost. Empty planting positions and suitable ground are required.",
+  "ownmods.timber.sneak": "Sneak to break a single block",
+  "ownmods.timber.sneak.tip": "Hold the sneak key to bypass Timber for this break.",
+  "ownmods.timber.axe.tip": "Only enabled axe types trigger Timber. All off means no trigger. Logs apply normal tool wear.",
+  "ownmods.timber.group.features": "Features",
+  "ownmods.timber.group.axes": "Allowed axes",
+  "ownmods.timber.consume": "Consume saplings",
+  "ownmods.timber.consume.tip": "Optional replanting cost. Off: free. On: uses fresh sapling drops, then your inventory; skips planting if there are not enough. Only applies when replanting is on. Creative mode remains free.",
+  "ownmods.timber.replant.no_saplings": "Replanting needs %s matching saplings. Disable material cost using the chest icon.",
+  "ownmods.timber.replant.blocked": "Replanting: the original planting position is not empty.",
+  "ownmods.timber.replant.bad_soil": "Replanting: the ground at the trunk base is unsuitable for this sapling.",
+  "ownmods.timber.replant.unloaded": "Replanting: the planting area is not loaded.",
+  "ownmods.timber.replant.failed": "Replanting failed. See latest.log for details."
+}

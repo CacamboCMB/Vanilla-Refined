@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_gravestone",
+  "version": "${version}",
+  "name": "Vanilla Refined — Gravestone",
+  "description": "Erstellt beim Tod aus mitgeführten Holzressourcen eine Grabkiste für die Items.",
+  "authors": [
+    "CacamboCMB"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}",
+    "ownmods_settings": ">=0.12.3-alpha.1"
+  },
+  "entrypoints": {
+    "main": [
+      "de.ownmods.gravestone.GravestoneMod"
+    ]
+  },
+  "mixins": [
+    "ownmods_gravestone.mixins.json"
+  ],
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  }
+}

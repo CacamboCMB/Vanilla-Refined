@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ownmods_notes",
+  "version": "${version}",
+  "name": "Vanilla Refined — Notes",
+  "description": "Lokales Notizbuch: Locations, Sammellisten, Ziele, Buchseiten und Checklisten. Kein neues Item.",
+  "authors": [
+    "CacamboCMB"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "de.ownmods.notes.client.NotesClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": "${loader_runtime}",
+    "minecraft": "${minecraft_runtime}",
+    "java": "${java_runtime}",
+    "fabric-api": "${fabric_api_runtime}",
+    "ownmods_settings": ">=0.12.3-alpha.1"
+  },
+  "custom": {
+    "vanilla_refined:compatibility": "candidate-not-runtime-validated",
+    "vanilla_refined:build_minecraft": "${minecraft_build}",
+    "vanilla_refined:stage": "foundation-candidate"
+  }
+}

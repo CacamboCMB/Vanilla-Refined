@@ -1,0 +1,22 @@
+{
+  "ownmods.timber.title": "Holzfällen",
+  "ownmods.timber.description": "Automatischer Baumabbau und mehr.",
+  "ownmods.timber.enabled": "Holzfällen aktiv",
+  "ownmods.timber.enabled.tip": "Schaltet die gesamte Holzfällen-Funktion ein oder aus. Änderungen gelten nach Speichern.",
+  "ownmods.timber.leaves": "Blätter sofort entfernen",
+  "ownmods.timber.leaves.tip": "Entfernt nur zugeordnete natürliche Blätter. Übliche Gegenstände der Blätter ohne zusätzliche Axtabnutzung; kein Bonus durch Glück oder Behutsamkeit.",
+  "ownmods.timber.replant": "Automatisch nachpflanzen",
+  "ownmods.timber.replant.tip": "Pflanzt nach vollständigem Fällen passende Setzlinge an der Stammbasis. Bei einer 2×2-Basis werden vier gesetzt. Der Materialverbrauch richtet sich nach „Setzlinge verbrauchen“. Freier Pflanzplatz und geeigneter Boden sind erforderlich.",
+  "ownmods.timber.sneak": "Beim Schleichen nur einen Block abbauen",
+  "ownmods.timber.sneak.tip": "Gedrückte Schleichtaste umgeht Holzfällen für diesen Abbau.",
+  "ownmods.timber.axe.tip": "Nur eingeschaltete Axttypen dürfen Holzfällen auslösen. Alle aus = kein Auslösen. Pro Stamm gilt normale Werkzeugabnutzung.",
+  "ownmods.timber.group.features": "Funktionen",
+  "ownmods.timber.group.axes": "Erlaubte Äxte",
+  "ownmods.timber.consume": "Setzlinge verbrauchen",
+  "ownmods.timber.consume.tip": "Optionaler Materialverbrauch beim Nachpflanzen. Aus: kostenlos. An: zuerst gerade fallengelassene Setzlinge, danach dein Inventar; bei Mangel wird nicht gepflanzt. Nur wirksam, wenn Nachpflanzen an ist. Kreativmodus bleibt kostenlos.",
+  "ownmods.timber.replant.no_saplings": "Nachpflanzen: %s passende Setzlinge nötig. Materialverbrauch lässt sich am Truhen-Symbol ausschalten.",
+  "ownmods.timber.replant.blocked": "Nachpflanzen: Der ursprüngliche Pflanzplatz ist nicht frei.",
+  "ownmods.timber.replant.bad_soil": "Nachpflanzen: Der Boden an der Stammbasis ist für diesen Setzling ungeeignet.",
+  "ownmods.timber.replant.unloaded": "Nachpflanzen: Der Pflanzbereich ist nicht geladen.",
+  "ownmods.timber.replant.failed": "Nachpflanzen fehlgeschlagen. Details stehen in latest.log."
+}

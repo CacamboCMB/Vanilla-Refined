@@ -1,0 +1,204 @@
+plugins {
+    id 'base'
+    id 'net.fabricmc.fabric-loom' version '1.17.20' apply false
+}
+// Exact build tool/dependency versions are separate from the runtime predicates.
+// An accepted runtime range is not a claim that unknown game versions were tested.
+def compatibilityFile = rootProject.file('compatibility/targets.json')
+def compatibility = new groovy.json.JsonSlurper().parse(compatibilityFile)
+def target = rootProject.minecraft_version.toString()
+def targetProfile = compatibility.targets[target]
+if (targetProfile == null) {
+    throw new GradleException("No reviewed build profile for Minecraft ${target}. Add and validate one in compatibility/targets.json; do not guess dependency versions.")
+}
+rootProject.ext.loader_version = providers.gradleProperty('loader_version').getOrElse(targetProfile.loader.toString())
+rootProject.ext.fabric_api_version = providers.gradleProperty('fabric_api_version').getOrElse(targetProfile.fabricApi.toString())
+if (!rootProject.fabric_api_version.endsWith('+' + target)) {
+    throw new GradleException("Fabric API ${rootProject.fabric_api_version} does not target Minecraft ${target}")
+}
+def runtimeTokens = [
+    minecraft_runtime: compatibility.runtime.minecraft.toString(),
+    loader_runtime: compatibility.runtime.loader.toString(),
+    fabric_api_runtime: compatibility.runtime.fabricApi.toString(),
+    java_runtime: compatibility.runtime.java.toString(),
+    minecraft_build: target
+]
+
+rootProject.ext.modProjects = subprojects.findAll { it.name != 'distribution' }
+allprojects {
+    group = rootProject.maven_group
+    version = rootProject.mod_version
+}
+
+project(':distribution') { apply plugin: 'java-library' }
+
+configure(rootProject.ext.modProjects) {
+    apply plugin: 'java-library'
+    apply plugin: 'net.fabricmc.fabric-loom'
+    base { archivesName = "ownmods-${project.name}" }
+    loom {
+        splitEnvironmentSourceSets()
+        mods { "ownmods_${project.name}" { sourceSet sourceSets.main; sourceSet sourceSets.client } }
+    }
+    repositories { mavenCentral() }
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        implementation "net.fabricmc:fabric-loader:${rootProject.loader_version}"
+        implementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+    }
+    java { withSourcesJar(); sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25 }
+    tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 25 }
+    // Actual dependency-free tests are invoked by pureTest, not empty JUnit suites.
+    tasks.named('test') { enabled = false }
+}
+configure(subprojects) {
+    tasks.named('processResources') {
+        inputs.property 'version', project.version
+        inputs.file compatibilityFile
+        inputs.properties runtimeTokens
+        filesMatching('fabric.mod.json') { expand(runtimeTokens + [version: project.version]) }
+    }
+}
+rootProject.ext.modProjects.findAll { it.name != 'settings' }.each { p ->
+    p.dependencies {
+        implementation project(':settings')
+        clientImplementation this.project(':settings').sourceSets.client.output
+    }
+}
+project(':minimap') {
+    dependencies {
+        implementation project(':notes')
+        clientImplementation this.project(':notes').sourceSets.client.output
+    }
+}
+def pythonCommand = providers.gradleProperty('pythonExecutable').getOrElse(
+        System.getProperty('os.name').toLowerCase().contains('windows') ? 'python' : 'python3')
+tasks.register('pureTest', Exec) {
+    group = 'verification'
+    description = 'Actual dependency-free production policy, transaction, tree and geometry tests; no game mocks.'
+    workingDir rootProject.projectDir
+    commandLine pythonCommand, 'tools/test_pure.py', '--release', '25'
+}
+tasks.register('verifyFoundation', Exec) {
+    group = 'verification'
+    workingDir rootProject.projectDir
+    commandLine pythonCommand, 'tools/verify_foundation.py'
+}
+tasks.register('verifyDistribution', Exec) {
+    group = 'verification'
+    dependsOn ':distribution:jar'
+    workingDir rootProject.projectDir
+    commandLine pythonCommand, 'tools/verify_distribution.py',
+        "distribution/build/libs/VanillaRefined-${rootProject.mod_version}+mc${rootProject.minecraft_version}.jar"
+}
+tasks.named('check') { dependsOn 'pureTest', 'verifyFoundation', 'verifyDistribution', 'compatibilityBuild' }
+tasks.named('build') { dependsOn subprojects.collect { it.tasks.named('assemble') } }
+tasks.register('assembleBundle', Sync) {
+    group = 'distribution'
+    description = 'One runtime JAR plus source archive. Minecraft and Fabric API are not included.'
+    dependsOn 'check', ':distribution:assemble'
+    from(project(':distribution').layout.buildDirectory.dir('libs')) {
+        include "VanillaRefined-${rootProject.mod_version}+mc${rootProject.minecraft_version}*.jar"
+    }
+    into layout.projectDirectory.dir('dist')
+}
+// Compatibility name retained for older developer scripts.
+tasks.register('coreTest') { dependsOn 'pureTest' }
+
+// Headless structural check; does NOT initialize Minecraft or replace a real game test.
+project(':settings') {
+    sourceSets {
+        compatibilityCheck { java.srcDir rootProject.file('tools/compat-check/src') }
+    }
+    tasks.register('compatibilityApiCheck', JavaExec) {
+        group = 'verification'
+        dependsOn tasks.named('compatibilityCheckClasses')
+        classpath = sourceSets.compatibilityCheck.runtimeClasspath + sourceSets.client.runtimeClasspath
+        mainClass = 'de.ownmods.compatcheck.CompatibilityApiCheck'
+    }
+}
+tasks.register('verifyCompatibilitySources') {
+    group = 'verification'
+    inputs.files(fileTree(rootProject.projectDir) { include '**/src/main/java/**/*.java', '**/src/client/java/**/*.java'; exclude '**/build/**' })
+    doLast {
+        def offenders = []
+        inputs.files.each { f ->
+            def text = f.getText('UTF-8')
+            if (text.contains('org.lwjgl.glfw') || text.contains('org.lwjgl.sdl') ||
+                    text.contains('InputConstants.Type.KEYSYM') || text.contains('InputConstants.Type.KEYBOARD') ||
+                    text =~ /InputConstants\.KEY_[A-Z0-9_]+/ ||
+                    text.contains('g.blit(RenderPipelines.GUI_TEXTURED,') ||
+                    text.contains('net.minecraft.world.item.AxeItem') ||
+                    text.contains('net.minecraft.world.item.HoeItem') ||
+                    text.contains('net.minecraft.world.item.ShovelItem') ||
+                    text.contains('.allItemsCopyStream()')) offenders.add(f)
+        }
+        if (!offenders.empty) throw new GradleException("Direct backend/version-bound input or texture calls: ${offenders}")
+    }
+}
+tasks.register('compatibilityBuild') {
+    group = 'verification'
+    description = 'Compile all 11 runtime modules plus targeted API shape checks. No game launch; no installation.'
+    dependsOn 'verifyCompatibilitySources', ':settings:compatibilityApiCheck'
+    dependsOn rootProject.ext.modProjects.collect { it.tasks.named('assemble') }
+}
+
+// 0.11.6: UI regression checks are separate from Minecraft/API checks.
+project(':settings') {
+    sourceSets {
+        uiLayoutCheck {
+            java.srcDirs = [rootProject.file('tools/ui-check'), file('src/main/java/de/ownmods/settings/layout')]
+            java.include '**/RefinedLayout.java', '**/LayoutChecks.java'
+        }
+    }
+    tasks.register('uiLayoutCheck', JavaExec) {
+        group = 'verification'
+        dependsOn tasks.named('uiLayoutCheckClasses')
+        classpath = sourceSets.uiLayoutCheck.runtimeClasspath
+        mainClass = 'de.ownmods.uicheck.LayoutChecks'
+    }
+}
+tasks.register('verifyUiTranslations') {
+    group = 'verification'
+    inputs.files(fileTree(rootProject.projectDir) {
+        include '**/src/main/resources/assets/*/lang/*.json', '**/src/client/java/**/*.java'
+        exclude '**/build/**'
+    })
+    doLast {
+        def languages = [en_us: [:], de_de: [:]]
+        ['en_us', 'de_de'].each { language ->
+            rootProject.ext.modProjects.each { p ->
+                p.fileTree('src/main/resources/assets').matching { include "*/lang/${language}.json" }.each { f ->
+                    def values = new groovy.json.JsonSlurper().parse(f, 'UTF-8')
+                    values.each { key, value ->
+                        if (!(value instanceof String) || value.trim().isEmpty())
+                            throw new GradleException("Empty/invalid translation: ${f}: ${key}")
+                        if (languages[language].containsKey(key))
+                            throw new GradleException("Duplicate translation key: ${language}: ${key}")
+                        languages[language][key] = value
+                    }
+                }
+            }
+        }
+        if (languages.en_us.keySet() != languages.de_de.keySet())
+            throw new GradleException('English and German translation keys differ.')
+        rootProject.ext.modProjects.each { p ->
+            p.fileTree('src/client/java').matching { include '**/*.java' }.each { f ->
+                def matcher = f.getText('UTF-8') =~ /"(vr\.[a-zA-Z0-9_.]+)"/
+                matcher.each { match ->
+                    String key = match[1]
+                    if (!key.endsWith('.') && !languages.en_us.containsKey(key))
+                        throw new GradleException("Missing fallback translation: ${f}: ${key}")
+                }
+            }
+        }
+        ['en_us', 'de_de'].each { language ->
+            if (languages[language]['ownmods.cropreplant.title'] != 'Farmer')
+                throw new GradleException("Farmer title mismatch: ${language}")
+        }
+        println "UI TRANSLATIONS: ${languages.en_us.size()} keys per language; en_us/de_de and static UI references verified."
+    }
+}
+tasks.named('compatibilityBuild') {
+    dependsOn ':settings:uiLayoutCheck', 'verifyUiTranslations'
+}
