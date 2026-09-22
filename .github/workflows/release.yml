@@ -1,0 +1,48 @@
+name: Draft alpha release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validation:
+    uses: ./.github/workflows/validate.yml
+  draft:
+    name: Create draft only after all validation jobs pass
+    needs: validation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          pattern: validated-mc*
+          path: release-assets
+          merge-multiple: true
+      - name: Refuse stable tags and verify version
+        shell: bash
+        run: |
+          python3 - <<'PYCODE'
+          import json, os, pathlib, re
+          tag = os.environ['TAG']
+          version = json.loads(pathlib.Path('compatibility/targets.json').read_text())['modVersion']
+          if tag != 'v' + version or not re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta|rc)[.0-9a-z-]*', tag):
+              raise SystemExit('Stable publication is blocked pending reviewed multiplayer acceptance. Version/tag mismatch is also blocked.')
+          PYCODE
+      - name: Hash release files and create private draft
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd release-assets && sha256sum -- *.jar *.json > SHA256SUMS.txt)
+          cp docs/RELEASE_NOTES.md release-assets/RELEASE_NOTES.md
+          gh release create "$TAG" release-assets/* --verify-tag --draft --prerelease --title "Vanilla Refined ${TAG#v}" --notes-file docs/RELEASE_NOTES.md

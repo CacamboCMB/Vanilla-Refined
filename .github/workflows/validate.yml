@@ -1,0 +1,93 @@
+name: Validated build
+on:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Minecraft ${{ matrix.minecraft }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        minecraft: ['26.2', '26.3']
+    env:
+      MC_VERSION: ${{ matrix.minecraft }}
+      MINECRAFT_EULA_ACCEPTED: ${{ vars.MINECRAFT_EULA_ACCEPTED }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4.4.3
+        with:
+          gradle-version: '9.6.0'
+          cache-read-only: ${{ github.event_name == 'pull_request' }}
+      - name: Compile all modules and run actual checks
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test -f SOURCE_IMPORT_REQUIRED.md; then
+            echo "::error::Full source import is still required; this is not a validated mod build."
+            exit 1
+          fi
+          mkdir -p validation/local
+          gradle --no-daemon --console=plain -Pminecraft_version="$MC_VERSION" clean build assembleBundle 2>&1 | tee validation/local/gradle.log
+      - name: Preserve unapproved candidate JARs
+        if: steps.build.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: candidate-mc${{ matrix.minecraft }}
+          path: distribution/build/libs/VanillaRefined-*.jar
+          if-no-files-found: error
+      - name: Production dedicated-server smoke (explicit EULA consent required)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t jars < <(find distribution/build/libs -maxdepth 1 -name "VanillaRefined-*+mc${MC_VERSION}.jar")
+          test "${#jars[@]}" -eq 1
+          python3 tools/server_smoke.py --minecraft "$MC_VERSION" --jar "${jars[0]}" --output "validation/local/smoke-${MC_VERSION}"
+      - name: Prepare draft-release assets bound to tested JAR
+        shell: bash
+        run: python3 tools/release_assets.py --minecraft "$MC_VERSION" --smoke "validation/local/smoke-${MC_VERSION}/smoke-result.json"
+      - name: Upload validated draft assets
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: validated-mc${{ matrix.minecraft }}
+          path: build/release-assets/*
+          if-no-files-found: error
+      - name: Preserve diagnostics even after failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: diagnostics-mc${{ matrix.minecraft }}
+          path: |
+            validation/local/
+            **/build/reports/
+          if-no-files-found: warn
+  powershell:
+    name: Windows PowerShell 5.1 syntax
+    runs-on: windows-2022
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Parse all delivery scripts using the Windows parser
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $failed = $false
+          Get-ChildItem tools -Filter *.ps1 -Recurse | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            if ($errors.Count -gt 0) { $errors | Format-List; $failed = $true }
+          }
+          if ($failed) { throw 'PowerShell parser rejected one or more scripts.' }
+          Write-Host "PowerShell parser $($PSVersionTable.PSVersion): PASS"
